@@ -1,0 +1,55 @@
+<BehaviorTree ID="MainTree">
+    <sequence name="grabCoin">
+        <condition>CanGrabCoin</condition>
+            <action>GrabCoin</action>
+    </sequence>
+    <sequence name="shootEnemy">
+        <condition>CanShootEnemy</condition>
+            <action>ShootEnemy</action>
+    </sequence>
+    <sequence name="simpleMoveForward">
+        <condition>CanMoveForward</condition>
+            <action>MoveForward</action>
+    </sequence>
+    <sequence name="MoveForwardJump">
+        <condition>CanMoveForwardJump</condition>
+            <action>MoveForwardJump</action>
+    </sequence>
+    <sequence name="simpleMoveBackward">
+        <condition>CanMoveBackward</condition>
+            <action>MoveBackward</action>
+    </sequence>
+    <sequence name="moveBackwardJump">
+        <condition>CanMoveBackwardJump</condition>
+            <action>MoveBackwardJump</action>
+    </sequence>
+</BehaviorTree>
+<!--<BehaviorTree ID="MainTree">
+<sequence name="grabCoin">
+    <condition>coinAboveMario and !isEnemyInFront</condition>
+    <action>moveRight and Jump</action>
+    <condition>coinRight and !isEnemyInFront</condition>
+    <action>moveRight</action>
+</sequence>
+<sequence name="shootEnemy">
+    <condition>isEnemyInFront and isMarioAbleToShoot</condition>
+    <action>shoot</action>
+</sequence>
+<sequence name="simpleMoveForward">
+    <condition>!(isEnemyInFront | isBlockInFront)</condition>
+    <action>moveRight</action>
+</sequence>
+<sequence name="MoveForwardJump">
+    <condition>!isEnemyInJump and (isMarioAbleToJump | !isMarioOnGround)</condition>
+    <action>moveRight and jump</action>
+</sequence>
+<sequence name="simpleMoveBackward">
+    <condition>!(isEnemyBehind | isBlockBehind)</condition>
+    <action>moveLeft</action>
+</sequence>
+<sequence name="moveBackwardJump">
+    <condition>!isEnemyInJump and (isMarioAbleToJump | !isMarioOnGround)</condition>
+    <action>moveLeft and jump</action>
+</sequence>
+</BehaviorTree>
+-->
